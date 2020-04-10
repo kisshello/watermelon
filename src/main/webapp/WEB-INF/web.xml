@@ -17,4 +17,239 @@
     <url-pattern>*.action</url-pattern>
   </servlet-mapping>
   <display-name>Archetype Created Web Application</display-name>
+  
+  <!-- 基本servlet-->
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>cn.itcast.servlet.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  
+  <!-- HTTPServlet -->
+  <servlet>
+    <servlet-name>ServletDemo1</servlet-name>
+    <servlet-class>cn.itcast.servlet.ServletDemo1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletDemo1</servlet-name>
+    <url-pattern>/ServletDemo1</url-pattern>
+  </servlet-mapping>
+
+  <!-- ServletDemo2 -->
+  <servlet>
+    <servlet-name>ServletDemo2</servlet-name>
+    <servlet-class>cn.itcast.servlet.ServletDemo2</servlet-class>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>abcd</param-value>
+    </init-param>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ServletDemo2</servlet-name>
+    <url-pattern>/ServletDemo2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ServletDemo5</servlet-name>
+    <servlet-class>cn.itcast.servlet.ServletDemo5</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletDemo7</servlet-name>
+    <servlet-class>cn.itcast.servlet.ServletDemo7</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletDemo8</servlet-name>
+    <servlet-class>cn.itcast.servlet.ServletDemo8</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletResponse1</servlet-name>
+    <servlet-class>cn.itcast.servlet.ServletResponse1</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ServletResponse2</servlet-name>
+    <servlet-class>cn.itcast.servlet.ServletResponse2</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ResponseDemo3</servlet-name>
+    <servlet-class>cn.itcast.servlet.ResponseDemo3</servlet-class>
+  </servlet>
+    <servlet>
+        <servlet-name>RequestServlet1</servlet-name>
+        <servlet-class>cn.itcast.servlet.RequestServlet1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RequestServlet2</servlet-name>
+        <servlet-class>cn.itcast.servlet.RequestServlet2</servlet-class>
+    </servlet>
+  <servlet>
+    <servlet-name>RequestServlet3</servlet-name>
+    <servlet-class>cn.itcast.servlet.RequestServlet3</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CookieServlet</servlet-name>
+    <servlet-class>cn.itcast.servlet.CookieServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CookieServlet</servlet-name>
+    <url-pattern>/CookieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RequestServlet3</servlet-name>
+    <url-pattern>/RequestServlet3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+        <servlet-name>RequestServlet2</servlet-name>
+        <url-pattern>/RequestServlet2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RequestServlet1</servlet-name>
+        <url-pattern>/RequestServlet1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>ResponseDemo3</servlet-name>
+    <url-pattern>/ResponseDemo3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletResponse2</servlet-name>
+    <url-pattern>/ServletResponse2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletResponse1</servlet-name>
+    <url-pattern>/ServletResponse1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletDemo8</servlet-name>
+    <url-pattern>/ServletDemo8</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletDemo7</servlet-name>
+    <url-pattern>/ServletDemo7</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ServletDemo5</servlet-name>
+    <url-pattern>/ServletDemo5</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+    <param-name>username</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>root1234</param-value>
+  </context-param>
+
+  <!-- web05_login-->
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.ailk.test.web05_login.controller.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!--过滤器 -->
+  <filter>
+    <filter-name>FilterDemo1</filter-name>
+    <filter-class>com.ailk.filter.FilterDemo1</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterDemo1</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>FilterDemo3</filter-name>
+    <filter-class>com.ailk.filter.FilterDemo3</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterDemo3</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>FilterDemo2</filter-name>
+    <filter-class>com.ailk.filter.FilterDemo2</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterDemo2</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>FilterDemo44</filter-name>
+    <filter-class>com.ailk.filter.FilterDemo4</filter-class>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>username</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>password</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterDemo44</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>FilterDemo5</filter-name>
+    <filter-class>com.ailk.filter.FilterDemo5</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterDemo5</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+
+  <!-- web05_login -->
+  <filter>
+    <filter-name>PrivilegeFilter</filter-name>
+    <filter-class>com.ailk.test.web05_login.filter.PrivilegeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PrivilegeFilter</filter-name>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  
+  <!-- 监听器的配置 -->
+  <!-- ServletContext监听器配置 -->
+  <listener>
+    <listener-class>com.ailk.listener.weblistener.MyServletContextListener</listener-class>
+  </listener>
+  
+  <!-- HTTPSession监听器配置 -->
+  <listener>
+    <listener-class>com.ailk.listener.weblistener.MyHttpSessionListener</listener-class>
+  </listener>
+  
+  <!-- servletRequest监听器配置 -->
+  <listener>
+    <listener-class>com.ailk.listener.weblistener.MyServletRequestListener</listener-class>
+  </listener>
+
+  <!-- 配置在线人数的两个监听器，一个是ServletContext的，一个是HTTPSession的 -->
+  <listener>
+    <listener-class>com.ailk.listener.weblistener.OnlineCountServletContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.ailk.listener.weblistener.OnlineCountHttpSessionListener</listener-class>
+  </listener>
+  
+  <listener>
+    <listener-class>com.ailk.listener.weblistener.MyHttpSessionAttributeListener</listener-class>
+  </listener>
+  
 </web-app>

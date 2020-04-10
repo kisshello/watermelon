@@ -1,0 +1,24 @@
+1、Lodop打印
+   官网地址：http://www.lodop.net/LodopDemo.html
+   对应的页面：newpages下有个Lodop.html，引用对应的lodop,js文件。
+   步骤：1）新建HTML页面，并在里面引入jQuery、Lodop和的js文件，还有Lodop的Object，如下：
+            <script language="JavaScript" type="text/javascript" src="../js/lodop/LodopFuncs.js"></script>
+            <script language="JavaScript" type="text/javascript" src="../js/base/jquery-1.7.1.js"></script>
+            <object  id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0>
+                <embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0></embed>
+            </object>
+        2）在页面上新建一个按钮，用来触发js函数，如下：
+            <button id="testLodop">打印</button>
+           并引入对应的要自己写的js函数
+           <script language="JavaScript" type="text/javascript" src="../js/lodop.js"></script>
+        3）在对应的js文件中的书写，如下：
+            a.先去声明LODOP，但是不要赋值，如果赋值的话，打开页面的时候HTML文件和对应的js文件此时都会被加载，那么它的加载会早于Lodopfunc的文件，所以会提示“C-Lodop没准备好”，100多次，如下：
+                var LODOP;
+            b.在具体的打印方法中，首先给上面的LODOP赋值
+                LODOP=getLodopAlert();
+              接下来紧接着要初始化LODOP，如下：
+                LODOP.PRINT_INIT("打印插件功能演示_代码功能_名片");
+              然后就是设置页面大小、字体、
+              最后就是打印了，不过先是打印预览比较好，如下：
+                LODOP.PREVIEW();
+         4）在本地文件中还可以引入LODOP的安装文件，但是这个具体怎么用还没有明白。
