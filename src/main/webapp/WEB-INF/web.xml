@@ -214,6 +214,16 @@
     <dispatcher>FORWARD</dispatcher>
   </filter-mapping>
 
+  <!-- 通用的字符编码的过滤器 -->
+  <filter>
+    <filter-name>GenericEncodingFilter</filter-name>
+    <filter-class>com.ailk.filter.GenericEncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>GenericEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
   <!-- web05_login -->
   <filter>
     <filter-name>PrivilegeFilter</filter-name>
