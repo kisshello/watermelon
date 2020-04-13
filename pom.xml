@@ -223,6 +223,20 @@
       <version>2.0</version>
     </dependency>
 
+    <!-- Spring 文件上传的包  -->
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.2.2</version>
+    </dependency>
+
+    <!-- Spring 文件上传的依赖包  -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+
 
 
 

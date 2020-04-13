@@ -157,9 +157,18 @@
     <servlet-name>UserServlet</servlet-name>
     <url-pattern>/UserServlet</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>com.ailk.upload.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
   
   <!--过滤器 -->
-  <filter>
+  <!--<filter>
     <filter-name>FilterDemo1</filter-name>
     <filter-class>com.ailk.filter.FilterDemo1</filter-class>
   </filter>
@@ -212,27 +221,27 @@
     <url-pattern>/*</url-pattern>
     <dispatcher>REQUEST</dispatcher>
     <dispatcher>FORWARD</dispatcher>
-  </filter-mapping>
+  </filter-mapping>-->
 
   <!-- 通用的字符编码的过滤器 -->
-  <filter>
+  <!--<filter>
     <filter-name>GenericEncodingFilter</filter-name>
     <filter-class>com.ailk.filter.GenericEncodingFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>GenericEncodingFilter</filter-name>
     <url-pattern>/*</url-pattern>
-  </filter-mapping>
+  </filter-mapping>-->
 
   <!-- web05_login -->
-  <filter>
+  <!--<filter>
     <filter-name>PrivilegeFilter</filter-name>
     <filter-class>com.ailk.test.web05_login.filter.PrivilegeFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>PrivilegeFilter</filter-name>
     <url-pattern>*.jsp</url-pattern>
-  </filter-mapping>
+  </filter-mapping>-->
   
   <!-- 监听器的配置 -->
   <!-- ServletContext监听器配置 -->
