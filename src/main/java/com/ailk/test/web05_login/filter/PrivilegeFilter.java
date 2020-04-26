@@ -25,14 +25,14 @@ public class PrivilegeFilter implements Filter {
         System.out.println(httpServletRequest.getRequestURL());
         User existUser = (User)httpServletRequest.getSession().getAttribute("existUser");
         //判断
-        if(existUser==null){
+        /*if(existUser==null){
             //没有登录
             request.setAttribute("msg","您还没有登录！没有权限访问！");
             request.getRequestDispatcher("/newpages/web05_login/login.jsp").forward(request,response);
         }else{
             //已经登录
             chain.doFilter(request, response);
-        }
+        }*/
 
     }
 

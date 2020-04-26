@@ -1,0 +1,18 @@
+文件上传的 3个要素：
+    1、表单的提交方式要是post
+    2、表单中要有<input type="file" />元素，需要有name属性和值
+    3、表单 enctype="multipart/form-data"
+需要引入jar包：
+    <!-- Spring 文件上传的包  -->
+        <dependency>
+          <groupId>commons-fileupload</groupId>
+          <artifactId>commons-fileupload</artifactId>
+          <version>1.2.2</version>
+        </dependency>
+
+        <!-- Spring 文件上传的依赖包  -->
+        <dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+          <version>2.4</version>
+        </dependency>
