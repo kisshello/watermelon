@@ -1,0 +1,5 @@
+jdbc.driverLocation=D:\java\software\assistant\software\mavenmanage\mavenfordalong\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar
+jdbc.driverClass=com.mysql.jdbc.Driver
+jdbc.connectionURL=jdbc:mysql:///test
+jdbc.userId=root
+jdbc.password=wanghongkai
