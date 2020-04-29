@@ -1,0 +1,32 @@
+1、建表语句
+    CREATE TABLE `PM_INCREMENT_CODE` (
+      `business_type` varchar(20) NOT NULL COMMENT '业务类型',
+      `business_code` bigint(10) unsigned zerofill DEFAULT NULL COMMENT '当前编码',
+      `company_code` varchar(20) NOT NULL COMMENT '公司编码',
+      `create_time` datetime DEFAULT NULL COMMENT '创建时间'
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+2、函数获取
+    CREATE  FUNCTION `getAutoIncrementCode`(in_business_type varchar(20),in_company_code varchar(20),in_length int(2)) RETURNS varchar(20) CHARSET utf8
+    BEGIN
+
+    	DECLARE old_id bigint(10) unsigned zerofill;
+    	DECLARE id_out bigint(10) unsigned zerofill;
+    	DECLARE return_id VARCHAR(10);
+    	DECLARE v_business_type VARCHAR(20);
+    	DECLARE v_company_code VARCHAR(20);
+    		SET v_business_type = LCASE(in_business_type),v_company_code=in_company_code;
+    		SELECT business_code INTO old_id FROM PM_WMS_INCREMENT_CODE WHERE business_type = v_business_type AND company_code = v_company_code and date_format(create_time,'%Y-%m')=date_format(now(),'%Y-%m') FOR UPDATE;
+    		if old_id is NULL then
+    			INSERT INTO PM_INCREMENT_CODE(business_type,business_code,company_code,create_time) value(v_business_type,1,v_company_code,NOW());
+    		set id_out=1;
+    		else
+    			set id_out=old_id+1;
+    			UPDATE PM_WMS_INCREMENT_CODE set business_code=id_out where business_type = in_business_type AND company_code = v_company_code and date_format(create_time,'%Y-%m')=date_format(now(),'%Y-%m');
+    		end if;
+    		SET return_id = id_out;
+    		RETURN LPAD(return_id,in_length,'0') ;
+    END
+3、mybatis中进行调用
+    <select id="getAutoIncrementCode" parameterType="Map" resultType="String">
+        SELECT `getAutoIncrementCode`(#{businessType},#{companyCode},#{length}) seqId
+      </select>
