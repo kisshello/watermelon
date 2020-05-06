@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>文件上传</h1>
-
+<h3>${msg}</h3>
 <form action="${pageContext.request.contextPath}/UploadServlet" method="post" enctype="multipart/form-data">
     文件描述：<input type="text" name="info">
     文件上传：<input type="file" name="upload">
