@@ -20,6 +20,7 @@
     <!-- 配置Handler -->
     <bean id="itemsController1" name = "itemsController1" class="cn.itcast.ssm.controller.ItemsController" />
     <bean id="itemsController2" name = "itemsController2" class="cn.itcast.ssm.controller.ItemsController2" />
+    <bean id="exportTestController" name = "exportTestController" class="com.ailk.test.ExportTestController" />
 
     <!-- 处理器映射器将bean的name作为URL进行查找，需要在配置Handler时指定 beanname  就是URL -->
     <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
@@ -32,6 +33,7 @@
                    <prop key="/queryItems.action">itemsController1</prop>
                    <prop key="/queryItems123.action">itemsController1</prop>
                    <prop key="/queryItems2.action">itemsController2</prop>
+                   <prop key="/export.action">exportTestController</prop>
                </props>
            </property>
     </bean>
